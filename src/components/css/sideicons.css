@@ -1,0 +1,25 @@
+.container{
+    display: flex;
+    justify-content:space-between;
+}
+.icon{
+    display:flex;
+    align-Items:center;
+    color:gray;
+    margin: 3px 0 3px 0;
+    padding: 7px;
+    padding-left: 18px;
+}
+.icon>p{
+    
+    margin: 0 0 2px 15px;
+   font-Weight:"300";
+}
+.icon>h4{
+   font-Weight:"200";
+}
+
+.icon:hover{
+   background-color:whitesmoke;
+   border-radius: 100px;
+}

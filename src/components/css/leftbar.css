@@ -1,0 +1,20 @@
+.side{
+    display: flex;
+    flex: 1;
+    width:100%;
+    padding:10px 0 0 5px;
+    
+}
+.top{
+    border-bottom: solid whitesmoke 2px;
+}
+.new{
+    border: solid whitesmoke thin !important;
+    box-shadow: 0 2px whitesmoke !important;
+    border-radius: 100px !important;
+    padding: 9px 25px 9px 25px !important;
+    font-weight: 100 !important;
+}
+.standard{
+    margin:16px 0 5px 0;
+}
