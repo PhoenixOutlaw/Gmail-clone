@@ -1,10 +1,12 @@
-
+.main{
+    display:flex;
+}
 .side{
-    flex: 0.3;
+    flex: 0.16;
     padding:10px 0 0 5px;
     
 }
-.top{
+.top,.mid,.submid{
     border-bottom: solid whitesmoke 2px;
 }
 .new{
@@ -18,4 +20,74 @@
 }
 .standard{
     margin:16px 0 5px 0;
+    overflow:auto;
+    height:200px;
+}
+.mid{
+    padding-bottom: 10px;
+}
+.mid>h4,.submid>h4{   
+    margin:10px 0 6px 20px;
+    font-size:15px;
+    font-weight:600;
+}
+.submid>h4{
+    margin:10px 0 2px 20px;
+}
+.meet{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0;
+    margin-left:14px;
+}
+.meet>div{
+    display:flex;
+    align-items:center;
+}
+#av{
+    height: 25px !important;
+    width:  25px !important;        
+}
+.meet>div>p{
+    margin-left: 7px;
+    font-size:13px;
+    font-weight:500;
+}
+#bu{
+    height: 20px !important;
+    width:  20px !important;
+}
+.bottom{
+    height: 135px;
+    padding:20px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+.bottom>img{
+    display: block;
+    margin:auto;
+    opacity:20%;
+    width:  90px;
+    height: 90px;
+}
+.bottom>p,.bottom>a{
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    color: blue;
+}
+.bottom>p{
+    color:gray !important;
+    font-size:14px;
+    font-weight: 100;
+}
+.footer{
+    display:flex;
+    justify-content:center;
+    border-top: 2px solid whitesmoke;
+}
+.footer>.MuiSvgIcon-root{
+    height:4px !important;
 }
