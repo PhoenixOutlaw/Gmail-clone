@@ -4,9 +4,13 @@
 
 .feedheader{
     display: flex;
+    width: 100%;
+    background-color:white;
     justify-content: space-between;
     border-bottom: whitesmoke solid;
     object-fit: contain;
+    position: fixed;
+    z-index:999;
 }
 
 .feedheaderleft{
@@ -49,8 +53,12 @@
     color: rgb(53, 53, 53);
     font-weight: 420;
 }
+.emails{
+    overflow:auto;
+}
 
 .feedmid{
     display: flex;
     border-bottom: solid whitesmoke;
+    margin-top: 48px;
 }

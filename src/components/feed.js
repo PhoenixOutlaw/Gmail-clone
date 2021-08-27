@@ -37,7 +37,8 @@ export const Feed = () => {
                 <ArrowForwardIosIcon />
                 </div>
             </div>
-      
+      <div className="emails">
+
         <div className="feedmid">
             
                 <Feedicon Icon={Inbox}title='Primary' color="#d93025" click={()=>setchoice([true,false,false])} on={choice[0]}/>
@@ -46,6 +47,7 @@ export const Feed = () => {
                         
         </div>
 
+      </div>
         </div>
     )
 }
