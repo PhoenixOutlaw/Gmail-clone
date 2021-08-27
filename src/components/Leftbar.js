@@ -39,7 +39,7 @@ export const Leftbar = () => {
           <Sideicons Icon={InsertDriveFileIcon} title="Drafts" no="2,374" />
           
           { (more ===false) && 
-          <Sideicons Icon={ArrowDropDown} title="More" clicked={onclick=()=>setmore(!more)} />
+          <Sideicons Icon={ArrowDropDown} title="More" clicked={()=>setmore(true)} />
           }
           {more &&
            (
@@ -53,7 +53,7 @@ export const Leftbar = () => {
             <Sideicons Icon={LabelIcon} title="categories"/>
             <Sideicons Icon={SettingsIcon} title="Manage labels"/>
             <Sideicons Icon={AddIcon} title="Create new label"/>
-            <Sideicons Icon={ArrowDropUpIcon} title="Less" clicked={onclick=()=>setmore(!more)} />
+            <Sideicons Icon={ArrowDropUpIcon} title="Less" clicked={()=>setmore(false)}  />
              </>
            )
            }          

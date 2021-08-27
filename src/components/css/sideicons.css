@@ -24,7 +24,8 @@
 }
 .no{
      margin: 0 20px 0 0 ;
-     font-Weight:600;
+     font-Weight:700;
+     font-size: .75rem;
 }
 
 .container:hover{
@@ -35,8 +36,8 @@
 }
 
 .selected {
-    color:rgb(168, 36, 36);
-    background-color:rgb(255, 215, 215) !important;
+    color:#d93025;
+    background-color:rgb(255, 231, 231) !important;
     border-radius: 100px;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;

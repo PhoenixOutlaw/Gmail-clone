@@ -1,0 +1,33 @@
+.feedicon{
+    flex: 0.22;
+    display:flex;
+    justify-content:left;
+    cursor:pointer;
+    border-radius:2px;
+    border-bottom: 3px solid;
+    padding: 0 7px 0 30px ;
+}
+.feedicon:hover{
+    background-color:whitesmoke;
+}
+.feedinactive:hover{
+    background-color:whitesmoke;
+    color:black !important;
+}
+.feedinactive{
+    border: none;
+}
+.feedicon>div{
+    display:flex;
+    align-items: center;
+}
+.feedicon>div>.MuiSvgIcon-root{
+    height:22px !important;
+    width :22px !important;
+}
+.feedicon>div>p{
+    margin-left: 14px;
+    font-size:14px;
+    font-weight: 500;
+}
+

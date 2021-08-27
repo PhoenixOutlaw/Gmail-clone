@@ -1,0 +1,56 @@
+.feed{
+    flex:0.84;
+}
+
+.feedheader{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: whitesmoke solid;
+    object-fit: contain;
+}
+
+.feedheaderleft{
+    display: flex;
+    align-items: center;
+    color: gray;
+    margin: 0 0 0 8px;
+
+}
+.feedheaderleft>.MuiSvgIcon-root,.bt{ 
+    width:  22px !important;
+    height: 22px !important;
+    cursor: pointer;
+}
+.ibt{
+    margin: 0 0 0 18px !important;
+}
+
+.feedheaderleft>.MuiCheckbox-root{
+    color:gray !important;
+    margin: 0 -30px 0 5px;
+}
+
+.feedheaderright{
+    display: flex;
+    align-items: center;
+    color: gray;
+    margin: 0 8px 0 0;
+}
+.feedheaderright>.MuiSvgIcon-root{
+    width:  13px !important;
+    height: 13px !important;
+    margin: 0 25px 0 4px ;
+    
+    cursor: pointer;
+}    
+.feedheaderright>p{
+    font-size: 11.6px;
+    margin: 0 40px 0 15px;
+    color: rgb(53, 53, 53);
+    font-weight: 420;
+}
+
+.feedmid{
+    display: flex;
+    border-bottom: solid whitesmoke;
+}

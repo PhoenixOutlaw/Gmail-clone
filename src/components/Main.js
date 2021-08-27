@@ -6,8 +6,8 @@ export const Main = () => {
   return (
     <div className="main">
         <Leftbar />
+        <Feed/>
       {/* 
-         <Feed/>
             <Rightbar/> */}
     </div>
   );

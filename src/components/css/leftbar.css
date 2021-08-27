@@ -3,7 +3,8 @@
 }
 .side{
     flex: 0.16;
-    padding:10px 0 0 5px;
+    padding:10px 10px 0 5px;
+    
     
 }
 .top,.mid,.submid{
@@ -59,7 +60,7 @@
     width:  20px !important;
 }
 .bottom{
-    height: 135px;
+    height: 126px;
     padding:20px;
     display: flex;
     flex-direction: column;
