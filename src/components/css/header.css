@@ -1,13 +1,14 @@
 .header{
     border-bottom: 2px solid whitesmoke;
-    height:65px;
+    height:9vh;
     display:flex;
     justify-content:space-between;
+    position: sticky;
 }
 .lefthead{
     display:flex;
     align-items: center;
-    margin-left: 28px;
+    margin-left: 18px;
 }
 .lefthead>img{
     object-fit:contain;

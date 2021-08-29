@@ -4,7 +4,7 @@
 .side{
     flex: 0.16;
     padding:10px 10px 0 5px;
-    
+    position: sticky;   
     
 }
 .top,.mid,.submid{

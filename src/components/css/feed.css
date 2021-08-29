@@ -9,7 +9,7 @@
     justify-content: space-between;
     border-bottom: whitesmoke solid;
     object-fit: contain;
-    position: fixed;
+    position: sticky;
     z-index:999;
 }
 
@@ -59,6 +59,10 @@
 
 .feedmid{
     display: flex;
-    border-bottom: solid whitesmoke;
-    margin-top: 48px;
+    border-bottom: solid whitesmoke;   
+}
+
+.email-list{
+    overflow:auto;
+    height: 84vh;
 }
