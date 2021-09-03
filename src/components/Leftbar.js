@@ -23,12 +23,12 @@ import KeyboardIcon from '@material-ui/icons/Keyboard';
 import PersonIcon from '@material-ui/icons/Person';
 
 
-export const Leftbar = () => {
+export const Leftbar = ({onclick}) => {
     const [more, setmore] = useState(false)
   return (
     <div className="side">
       <div className="top">
-        <Button startIcon={<AddIcon />} className="new">
+        <Button startIcon={<AddIcon />} className="new" onClick={onclick}>
           compose
         </Button>
         <div className="standard">

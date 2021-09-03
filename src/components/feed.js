@@ -9,97 +9,86 @@ import { Checkbox, IconButton } from "@material-ui/core";
 import LocalOfferIcon from "@material-ui/icons/LocalOffer";
 import { Feedicon } from "./feedicon";
 import { Email } from "./Email";
+import { BrowserRouter as Router, Switch, Route, Link, useHistory } from "react-router-dom";
+import { Mail } from "./Mail";
 
 let n = 11,
   o = "12,393";
-export const Feed = () => {
+
+export const  Feed = () => {
+
+  const history=useHistory();
+
+
+
   const [choice, setchoice] = useState([true, false, false]);
 
   return (
-    <div className="feed">
-      <div className="feedheader">
-        <div className="feedheaderleft">
-          <Checkbox label="chkbx " />
+    <Router>
+      <Switch>
+        <Route path="/" exact>
+          <div className="feed">
+            <div className="feedheader">
+              <div className="feedheaderleft">
+                <Checkbox label="chkbx " />
 
-          <IconButton className="ibt">
-            <ArrowDropDown className="bt" />
-          </IconButton>
-          <IconButton>
-            <ReplayIcon className="bt" />
-          </IconButton>
-          <IconButton>
-            <MoreVertIcon className="bt" />
-          </IconButton>
-        </div>
+                <IconButton className="ibt">
+                  <ArrowDropDown className="bt" />
+                </IconButton>
+                <IconButton>
+                  <ReplayIcon className="bt" />
+                </IconButton>
+                <IconButton>
+                  <MoreVertIcon className="bt" />
+                </IconButton>
+              </div>
 
-        <div className="feedheaderright">
-          <p>
-            {n}-50 of {o}
-          </p>
-          <ArrowBackIosIcon />
-          <ArrowForwardIosIcon />
-        </div>
-      </div>
-      <div className="emails">
-          <div className="email-list">
-        <div className="feedmid">
-          <Feedicon
-            Icon={Inbox}
-            title="Primary"
-            color="#d93025"
-            click={() => setchoice([true, false, false])}
-            on={choice[0]}
-          />
-          <Feedicon
-            Icon={Person}
-            title="Social"
-            color="#1a73e8"
-            click={() => setchoice([false, true, false])}
-            on={choice[1]}
-          />
-          <Feedicon
-            Icon={LocalOfferIcon}
-            title="Promotion"
-            color="#188038"
-            click={() => setchoice([false, false, true])}
-            on={choice[2]}
-          />
-        </div>
+              <div className="feedheaderright">
+                <p>
+                  {n}-50 of {o}
+                </p>
+                <ArrowBackIosIcon />
+                <ArrowForwardIosIcon />
+              </div>
+            </div>
 
-          <Email />
-          <Email />
-          <Email />
-          <Email />
-          <Email />
-          <Email />
-          <Email />
-          <Email />
-          <Email />
-          <Email />
-          <Email />
-          <Email />
-          <Email />
-          <Email />
-          <Email />
-          <Email />
-          <Email />
-          <Email />
-          <Email />
-          <Email />
-          <Email />
-          <Email />
-          <Email />
-          <Email />
-          <Email />
-          <Email />
-          <Email />
-          <Email />
-          <Email />
-          <Email />
-          <Email />
-
-        </div>
-      </div>
-    </div>
+            <div className="emails">
+              <div className="email-list">
+                <div className="feedmid">
+                  <Feedicon
+                    Icon={Inbox}
+                    title="Primary"
+                    color="#d93025"
+                    click={() => setchoice([true, false, false])}
+                    on={choice[0]}
+                  />
+                  <Feedicon
+                    Icon={Person}
+                    title="Social"
+                    color="#1a73e8"
+                    click={() => setchoice([false, true, false])}
+                    on={choice[1]}
+                  />
+                  <Feedicon
+                    Icon={LocalOfferIcon}
+                    title="Promotion"
+                    color="#188038"
+                    click={() => setchoice([false, false, true])}
+                    on={choice[2]}
+                  />
+                </div>
+                <Email />
+                <Email />
+              </div>
+            </div>
+          </div>
+        </Route>
+        
+        //////////////////////////////////////////////////////////////////////////
+        <Route path="/m">
+          <Mail/>
+        </Route>
+      </Switch>
+    </Router>
   );
 };

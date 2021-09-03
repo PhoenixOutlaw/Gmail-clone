@@ -1,6 +1,13 @@
 .main{
     display:flex;
+
 }
+@media only screen and (max-width: 600px) {
+    .main {
+      flex-direction: column;
+    }
+  }
+
 .side{
     flex: 0.16;
     padding:10px 10px 0 5px;
@@ -89,6 +96,7 @@
     justify-content:center;
     border-top: 2px solid whitesmoke;
 }
-.footer>.MuiSvgIcon-root{
-    height:4px !important;
+.footer>div>.MuiButton-root{
+    color:gray;
 }
+

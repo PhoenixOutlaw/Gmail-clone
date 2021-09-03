@@ -1,0 +1,92 @@
+.comp{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    border-top-right-radius: 22px;
+    border-top-left-radius: 22px;
+    background-color:white;
+    z-index:1000;
+    right:2vh;
+    bottom: 0vh;
+    width:75vh;
+}
+.conte{
+    height: 65vh;
+    border:  rgb(214, 214, 214) solid;
+}
+.compheader{
+    border: whitesmoke;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    color:white;
+    background-color: rgb(43, 42, 42);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.compheader>div{
+    margin-right:20px
+}
+.compheader>div>.MuiSvgIcon-root{
+    height:20px;
+    width :20px;
+    margin-left:10px;
+    cursor: pointer;
+}
+#mi{
+    margin-top: -10px !important;
+}
+.cmini{
+    display: none;
+}
+.cfull{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    border-top-right-radius: 22px;
+    border-top-left-radius: 22px;
+    background-color:white;
+    z-index:1000;
+    right:20vh;
+    bottom: 10vh;
+    width:170vh;
+}
+.cful{
+    height: 80vh;
+    border:  whitesmoke solid;
+}
+
+.ccontent{
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    
+}
+.ccontent>form>p{
+    color: gray;
+    font-size:16px;
+    font-weight: 400;
+    margin: 3px 0 3px 0;
+    border-bottom: solid rgb(219, 219, 219) thin;
+}
+.cp>input{
+    border:  black solid;
+    font-size:14px;
+    font-weight: 400;
+    margin-bottom: 5px;
+    border: none ;
+    outline: none ;
+    
+}
+#cmain{
+    font-size:14px;
+    font-weight: 400;
+    margin-bottom: 5px;
+    border: none ;
+    outline: none ;
+    width: 100%;
+    overflow-y: auto;
+    overflow-wrap: break-word;
+   
+
+}
