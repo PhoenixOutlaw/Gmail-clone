@@ -52,3 +52,53 @@
     height: 33px;
     width: 33px;
 }
+#avatar:hover{
+    cursor: pointer;
+}
+.hopt{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 35vh;
+    position: absolute;
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.164);
+    border-radius:10px;
+    background-color:rgb(255, 255, 255);
+    width: 40vh;
+    right:0;
+    color: black;
+    z-index: 1;
+}
+.hopt>h3,.hopt>h2{
+    margin: 0;
+    font-weight: 500;
+}
+.hopt>h2{
+    margin:10px 0 3px 0;
+    font-size: 20px;
+}
+.hopt>h3{
+    margin:0 0 10px 0;
+    font-size: 15px;
+    font-weight:300;
+    color: gray;
+}
+.lout{
+    width: 100%;
+    border-top:solid rgb(226, 226, 226) thin;
+    display: flex;
+    justify-content: center;
+    padding-top: 7px
+ }
+ .lout>button{
+     font-size:15px;
+     padding: 8px 30px 8px 30px; 
+     border: none;   
+     border-radius:5px;
+     background-color:transparent;
+     cursor: pointer;
+ }
+ .lout>button:hover{
+     background-color: whitesmoke;
+ }

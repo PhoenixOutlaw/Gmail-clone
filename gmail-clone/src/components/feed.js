@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, {  useState } from "react";
 import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
 import ArrowBackIosIcon from "@material-ui/icons/ArrowBackIos";
 import ReplayIcon from "@material-ui/icons/Replay";
@@ -9,34 +9,21 @@ import { Checkbox, IconButton } from "@material-ui/core";
 import LocalOfferIcon from "@material-ui/icons/LocalOffer";
 import { Feedicon } from "./feedicon";
 import { Email } from "./Email";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route
-} from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { Mail } from "./Mail";
-import { db } from "./fireb";
 
 let n = 11,
   o = "12,393";
 
-export const Feed = () => {
+export const  Feed = () => {
 
+  const [email, setemail] = useState({});
+
+useEffect(() => {
   
-  const [email, setemail] = useState([]);
+  
+}, [])
 
-  useEffect(() => {
-    db.collection("sent")
-      .orderBy("timestamp", "desc")
-      .onSnapshot((snap) =>
-        setemail(
-          snap.docs.map((doc) => ({
-            id: doc.id,
-            data: doc.data(),
-          }))
-        )
-      );
-  }, []);
 
   const [choice, setchoice] = useState([true, false, false]);
 
@@ -93,18 +80,17 @@ export const Feed = () => {
                     click={() => setchoice([false, false, true])}
                     on={choice[2]}
                   />
-                  
                 </div>
-                {email.map(({id , data:{to , subject , message ,timestamp}}) =>(
-                  <Email id={id} subject={subject} to={to} sub={subject} message={message} time={new Date(timestamp?.seconds * 1000).toUTCString()}/>
-                )) }
+                <Email />
+                <Email />
               </div>
             </div>
           </div>
         </Route>
-
+        
+        
         <Route path="/m">
-          <Mail />
+          <Mail/>
         </Route>
       </Switch>
     </Router>

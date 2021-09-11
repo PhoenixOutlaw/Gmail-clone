@@ -54,6 +54,7 @@
 .cful{
     height: 80vh;
     border:  whitesmoke solid;
+    box-shadow: 0 0 0 700vh #00000080;
 }
 
 .ccontent{
@@ -76,7 +77,8 @@
     margin-bottom: 5px;
     border: none ;
     outline: none ;
-    
+    overflow-wrap: break-word;
+    max-width:60px;
 }
 #cmain{
     font-size:14px;

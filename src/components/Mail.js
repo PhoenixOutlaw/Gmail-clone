@@ -21,13 +21,19 @@ import LaunchIcon from '@material-ui/icons/Launch';
 import { ArrowDropDown, ArrowDropUp, Forward, Star } from "@material-ui/icons";
 import MoreVert from "@material-ui/icons/MoreVert";
 import ReplyIcon from '@material-ui/icons/Reply';
+import { selectopenmail } from "../features/mailSlice";
+import { useSelector } from "react-redux";
 
 
 let n = 11,
   o = "12,393";
 export const Mail = () => {
-    const [detail, setdetail] = useState(false)
+    const [detail, setdetail] = useState(false);
+
+    const selemail = useSelector(selectopenmail);
+    
     const history=useHistory();
+   
     
     return (
        
@@ -85,7 +91,7 @@ export const Mail = () => {
         <div className="ml">
             <div className="mlhead">
                 <div id="sub">
-                    <h4>Your Amazon.in order #171-9840650-1818769 of 1 item has been dispatched</h4>
+                    <h4>{selemail.subject}</h4>
                 </div>
                 <div id="mopt">
                     <PrintIcon className="bt"/>
@@ -97,12 +103,12 @@ export const Mail = () => {
                 <div className="mleft">
                 <Avatar/>
                 <div className="sinfo">
-                <h5>Address</h5>
+                <h5>{selemail.to}</h5>
                 <p>to me {detail===false&&<span><ArrowDropDown onClick={()=>setdetail(!detail)}/></span>}{detail===true &&<span><ArrowDropUp onClick={()=>setdetail(!detail)}/></span>} </p>
                 </div>
                 </div>
                 <div className="mright">
-                    <p>tym</p>
+                    <p>{selemail.timestamp}</p>
                     <Star className="bt"/>
                     <ReplyIcon className="bt"/>
                     <MoreVert className="bt"/>
@@ -118,7 +124,7 @@ export const Mail = () => {
                 
                 </div>
             <div className="mailcontent">
-                <p>contentDolore Qui non commodo voluptate mollit officia Lorem Lorem. Anim exercitation Lorem occaecat minim laboris eu. Aliquip elit dolor consequat consequat exercitation tempor consectetur consectetur ex.ullamco sunt sint sit consectetur qui amet id consectetur occaecat deserunt adipisicing. Dolor in commodo sint exercitation consectetur dolore veniam est proident eu exercitation veniam irure. Aliqua ullamco ut deserunt elit proident laboris minim laborum. Culpa cillum laboris pariatur adipisicing esse eiusmod voluptate. Cillum consequat occaecat minim velit velit ut ullamco. Voluptate aliquip aute occaecat nisi excepteur eiusmod. Et ullamco reprehenderit dolore tempor esse velit ea consequat dolor anim aute.contentDolore Qui non commodo voluptate mollit officia Lorem Lorem. Anim exercitation Lorem occaecat minim laboris eu. Aliquip elit dolor consequat consequat exercitation tempor consectetur consectetur ex.ullamco sunt sint sit consectetur qui amet id consectetur occaecat deserunt adipisicing. Dolor in commodo sint exercitation consectetur dolore veniam est proident eu exercitation veniam irure. Aliqua ullamco ut deserunt elit proident laboris minim laborum. Culpa cillum laboris pariatur adipisicing esse eiusmod voluptate. Cillum consequat occaecat minim velit velit ut ullamco. Voluptate aliquip aute occaecat nisi excepteur eiusmod. Et ullamco reprehenderit dolore tempor esse velit ea consequat dolor anim aute.contentDolore Qui non commodo voluptate mollit officia Lorem Lorem. Anim exercitation Lorem occaecat minim laboris eu. Aliquip elit dolor consequat consequat exercitation tempor consectetur consectetur ex.ullamco sunt sint sit consectetur qui amet id consectetur occaecat deserunt adipisicing. Dolor in commodo sint exercitation consectetur dolore veniam est proident eu exercitation veniam irure. Aliqua ullamco ut deserunt elit proident laboris minim laborum. Culpa cillum laboris pariatur adipisicing esse eiusmod voluptate. Cillum consequat occaecat minim velit velit ut ullamco. Voluptate aliquip aute occaecat nisi excepteur eiusmod. Et ullamco reprehenderit dolore tempor esse velit ea consequat dolor anim aute.contentDolore Qui non commodo voluptate mollit officia Lorem Lorem. Anim exercitation Lorem occaecat minim laboris eu. Aliquip elit dolor consequat consequat exercitation tempor consectetur consectetur ex.ullamco sunt sint sit consectetur qui amet id consectetur occaecat deserunt adipisicing. Dolor in commodo sint exercitation consectetur dolore veniam est proident eu exercitation veniam irure. Aliqua ullamco ut deserunt elit proident laboris minim laborum. Culpa cillum laboris pariatur adipisicing esse eiusmod voluptate. Cillum consequat occaecat minim velit velit ut ullamco. Voluptate aliquip aute occaecat nisi excepteur eiusmod. Et ullamco reprehenderit dolore tempor esse velit ea consequat dolor anim aute.contentDolore Qui non commodo voluptate mollit officia Lorem Lorem. Anim exercitation Lorem occaecat minim laboris eu. Aliquip elit dolor consequat consequat exercitation tempor consectetur consectetur ex.ullamco sunt sint sit consectetur qui amet id consectetur occaecat deserunt adipisicing. Dolor in commodo sint exercitation consectetur dolore veniam est proident eu exercitation veniam irure. Aliqua ullamco ut deserunt elit proident laboris minim laborum. Culpa cillum laboris pariatur adipisicing esse eiusmod voluptate. Cillum consequat occaecat minim velit velit ut ullamco. Voluptate aliquip aute occaecat nisi excepteur eiusmod. Et ullamco reprehenderit dolore tempor esse velit ea consequat dolor anim aute.</p>
+                <p>{selemail.message}</p>
             </div>
             <div className="mailfooter">
                 <Button startIcon={<ReplyIcon/>} className="mf">Reply</Button>

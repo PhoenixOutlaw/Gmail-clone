@@ -1,11 +1,30 @@
+/* eslint-disable no-unused-vars */
 import React, { useState } from "react";
 import CloseIcon from "@material-ui/icons/Close";
 import RemoveIcon from "@material-ui/icons/Remove";
 import FullscreenIcon from "@material-ui/icons/Fullscreen";
 import FullscreenExitIcon from "@material-ui/icons/FullscreenExit";
 import "./css/compose.css";
+import { useForm } from "react-hook-form";
+import { db } from "./fireb";
+import firebase from 'firebase'
+
+
 export const Compose = ({ close }) => {
   const [resize, setresize] = useState({ mini: false, fullsize: false });
+  const {register,handleSubmit}=useForm();
+
+ const submit = (data)=>{
+    console.log('sending ')
+     db.collection('sent').add({
+      to:data.to,
+      subject:data.subject,
+      message:data.message,
+      timestamp:firebase.firestore.FieldValue.serverTimestamp(),
+      
+    });
+     close();
+ }
 
   function standard() {
     console.log("entered");
@@ -39,22 +58,23 @@ export const Compose = ({ close }) => {
         }`}
       >
         <div className="ccontent">
-          <form action="">
+          <form onSubmit={handleSubmit(submit)}>
             <p>
               To
               <span className="cp">
                 {" "}
-                <input type="text" />{" "}
+                <input name='to'type="email" {...register('to',{required:true})}/>{" "}
               </span>
             </p>
             <p>
               Subject
               <span className="cp">
                 {" "}
-                <input type="text" />{" "}
+                <input name='subject' type="text" { ...register('subject',{required:true})} />{" "}
               </span>
             </p>
-            <input id="cmain" type="text" />
+            <input name='message' id="cmain" type="text" {...register('message' , {required:true})} />
+            <input type='submit' style={{display:'none'}} />
           </form>
         </div>
         <div className="cfooter"></div>

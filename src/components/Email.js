@@ -4,14 +4,23 @@ import { Checkbox } from "@material-ui/core";
 import { StarBorderOutlined } from "@material-ui/icons";
 import "./css/email.css";
 import { useHistory } from "react-router-dom";
-let sub="A New Scooter Everyday!";
-let desc="Laboris sint pariatur proident in Lorem do laborum esse in ullamco commodo officia ex elit. Nisi Lorem et ex commodo esse magna nostrud. Reprehenderit minim ullamco occaecat aliquip aliqua mollit laboris incididunt mollit fugiat.";
+import { useDispatch } from "react-redux";
+import { selectedmail } from "../features/mailSlice";
 
 
-export const Email = () => {
+export const Email = ({to , sub , message ,time}) => {
+
+  const dispatch = useDispatch();
    const [mover, setmover] = useState(false)
+   const history = useHistory(); 
+
+  const selected =()=>{
+    dispatch(selectedmail({
+     to,sub,message,time,
+    }));
   
-     const history = useHistory(); 
+    history.push("/m");
+  }
   
   return (
     <div className="mail" onMouseEnter={()=>setmover(true)}onMouseLeave={()=>setmover(false)} >
@@ -21,17 +30,17 @@ export const Email = () => {
         }
         <Checkbox />
         <StarBorderOutlined />
-        <p>senderr</p>
+        <p>{to}</p>
       </div>
-      <div className="di" onClick={ ()=>history.push("/m")}>
+      <div className="di" onClick={selected}>
         <div >
         <p> {`${sub}  - `}</p> 
-        <p id="desc">{` ${desc}`}</p>
+        <p id="desc">{` ${message}`}</p>
         </div>
       </div>
 
       <div className='tym'>
-        <p>Aug 12</p>
+        <p>{time}</p>
       </div>
     </div>
   );

@@ -1,0 +1,89 @@
+.lcont{
+    
+}
+.log,.reg{
+    width: 60vh;
+    margin-top: 10vh !important;
+    height: 70vh;
+    margin: auto;
+    border: solid gray thin;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.reg{
+    height:85vh
+}
+.log>img,.reg>img{
+    margin-top: 20px;
+}
+.si{
+    margin-top:50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.si>h4{
+    font-size:23px;
+    font-weight: 400;
+}
+.si>p{
+    font-size: 19px;
+    font-weight:340;
+}
+.si>h4,.si>p{
+    margin: 0;
+}
+
+.in{
+    margin-top:30px;
+    display: flex;
+    flex-direction: column;
+}
+.in>input{
+    outline:none;
+    width:49vh;
+    margin-top: 18px;
+    border: whitesmoke solid 2px;
+    padding: 5px;
+    border-radius:8px;
+    font-size: 15px;
+}
+.in>input:focus{
+    border: rgb(41, 115, 253)  solid 2px;
+
+}
+.in>button{
+    display: none;
+}
+.opt,.ropt{
+    display: flex;
+    width: 100%;
+    justify-content:space-evenly;
+    align-items: center;
+    margin-top:80px
+}
+.ropt{
+    justify-content:center;
+}
+.opt>button, .ropt>button {
+    font-size:14px;
+    font-weight: 200 !important;
+    border-radius: 5px;
+    border: none;
+    padding: 10px 20px 10px 20px ;
+    background-color: transparent;
+    color: rgb(180, 180, 180);
+}
+.ii{
+    background-color:rgb(41, 115, 253) !important;
+    color:whitesmoke !important;
+}
+.ii:hover{
+    background-color:rgb(39, 96, 202) !important;
+}
+#i:hover{
+    background-color:rgba(128, 128, 128, 0.089);
+    color: rgb(124, 124, 124);
+}
