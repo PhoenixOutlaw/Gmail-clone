@@ -9,8 +9,6 @@
     justify-content: space-between;
     border-bottom: whitesmoke solid;
     object-fit: contain;
-    position: sticky;
-    z-index:0;
 }
 
 .feedheaderleft{
@@ -65,6 +63,9 @@
 .email-list{
     overflow:auto;
     height: 84vh;
+}
+.email-list::-webkit-scrollbar{
+    display: none;
 }
 
 

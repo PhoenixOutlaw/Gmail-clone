@@ -5,13 +5,15 @@ import { auth } from './components/fireb';
 import { Header } from './components/header'
 import { Login } from './components/login';
 import { Main } from './components/Main';
-import { selectlogin,login, logout } from './features/loginSlice';
+import { selectlogin,login, logout, loading, selectloading } from './features/loginSlice';
 function App() {
   
   const  islogin= useSelector(selectlogin);
+  const isloading= useSelector(selectloading);
   const dispatch = useDispatch();
 
   useEffect(() => {
+    // dispatch(loading());
    auth.onAuthStateChanged(
      (user)=>{
        if(user){
@@ -28,16 +30,25 @@ function App() {
    )
   }, [])
 
-  
+  if(window.innerWidth<=620){
+    return(
+      <div><h1 style={{fontsize:"24px" , textAlign:"center" ,marginTop:"190px"}}>Not made for phone</h1></div>
+    )
+  }
   return (
+
     <div className="App">
-      {!islogin?
-         (<Login/>):
-        (<>
-        <Header/>
-         <Main/>
-        </>)
-      }
+      {isloading?("yooooooo"):(
+         !islogin?
+          (<Login/>):
+         (<>
+         <Header/>
+          <Main/>
+         </>)
+       
+      )}
+
+     
     </div>
   )
       

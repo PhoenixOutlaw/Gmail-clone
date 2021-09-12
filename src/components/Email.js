@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import DragIndicatorIcon from "@material-ui/icons/DragIndicator";
 import { Checkbox } from "@material-ui/core";
 import { StarBorderOutlined } from "@material-ui/icons";
@@ -13,15 +13,17 @@ export const Email = ({to , sub , message ,time}) => {
   const dispatch = useDispatch();
    const [mover, setmover] = useState(false)
    const history = useHistory(); 
-
-  const selected =()=>{
-    dispatch(selectedmail({
-     to,sub,message,time,
-    }));
-  
-    history.push("/m");
-  }
-  
+ 
+   
+   const selected =()=>{
+     
+     dispatch(selectedmail({
+       to,sub,message,time,
+      }));
+      history.push("/m");
+    }
+    
+    
   return (
     <div className="mail" onMouseEnter={()=>setmover(true)}onMouseLeave={()=>setmover(false)} >
       <div className="left">

@@ -10,8 +10,10 @@ import "./css/header.css";
 import { Avatar, IconButton } from "@material-ui/core";
 import { useDispatch } from "react-redux";
 import { logout } from "../features/loginSlice";
+import { auth} from "./fireb";
 
 export const Header = () => {
+  
   const [hopt, sethopt] = useState(false);
   const dispatch = useDispatch();
   return (
@@ -46,7 +48,7 @@ export const Header = () => {
             <h2>namemera</h2>
             <h3>blah blah @gmail.com</h3>
             <div className="lout">
-            <button onClick={() => dispatch(logout())} >logout</button>
+            <button onClick={() => { auth.signOut().then(dispatch(logout()))}} >logout</button>
             </div>
             </div>}
       </div>
