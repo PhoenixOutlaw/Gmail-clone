@@ -95,35 +95,8 @@ export const Feed = () => {
                   />
                   
                 </div>
-                {email.map(({id , data:{to , subject , message ,timestamp}}) =>(
-                  <>
+                {email.map(({id , data:{to , subject , message ,timestamp}}) =>(  
                   <Email id={id} subject={subject} to={to} sub={subject} message={message} time={new Date(timestamp?.seconds * 1000).toUTCString()}/>
-                  <Email id={id} subject={subject} to={to} sub={subject} message={message} time={new Date(timestamp?.seconds * 1000).toUTCString()}/>
-                  <Email id={id} subject={subject} to={to} sub={subject} message={message} time={new Date(timestamp?.seconds * 1000).toUTCString()}/>
-                  <Email id={id} subject={subject} to={to} sub={subject} message={message} time={new Date(timestamp?.seconds * 1000).toUTCString()}/>
-                  <Email id={id} subject={subject} to={to} sub={subject} message={message} time={new Date(timestamp?.seconds * 1000).toUTCString()}/>
-                  <Email id={id} subject={subject} to={to} sub={subject} message={message} time={new Date(timestamp?.seconds * 1000).toUTCString()}/>
-                  <Email id={id} subject={subject} to={to} sub={subject} message={message} time={new Date(timestamp?.seconds * 1000).toUTCString()}/>
-                  <Email id={id} subject={subject} to={to} sub={subject} message={message} time={new Date(timestamp?.seconds * 1000).toUTCString()}/>
-                  <Email id={id} subject={subject} to={to} sub={subject} message={message} time={new Date(timestamp?.seconds * 1000).toUTCString()}/>
-                  <Email id={id} subject={subject} to={to} sub={subject} message={message} time={new Date(timestamp?.seconds * 1000).toUTCString()}/>
-                  <Email id={id} subject={subject} to={to} sub={subject} message={message} time={new Date(timestamp?.seconds * 1000).toUTCString()}/>
-                  <Email id={id} subject={subject} to={to} sub={subject} message={message} time={new Date(timestamp?.seconds * 1000).toUTCString()}/>
-                  <Email id={id} subject={subject} to={to} sub={subject} message={message} time={new Date(timestamp?.seconds * 1000).toUTCString()}/>
-                  <Email id={id} subject={subject} to={to} sub={subject} message={message} time={new Date(timestamp?.seconds * 1000).toUTCString()}/>
-                  <Email id={id} subject={subject} to={to} sub={subject} message={message} time={new Date(timestamp?.seconds * 1000).toUTCString()}/>
-                  <Email id={id} subject={subject} to={to} sub={subject} message={message} time={new Date(timestamp?.seconds * 1000).toUTCString()}/>
-                  <Email id={id} subject={subject} to={to} sub={subject} message={message} time={new Date(timestamp?.seconds * 1000).toUTCString()}/>
-                  <Email id={id} subject={subject} to={to} sub={subject} message={message} time={new Date(timestamp?.seconds * 1000).toUTCString()}/>
-                  <Email id={id} subject={subject} to={to} sub={subject} message={message} time={new Date(timestamp?.seconds * 1000).toUTCString()}/>
-                  <Email id={id} subject={subject} to={to} sub={subject} message={message} time={new Date(timestamp?.seconds * 1000).toUTCString()}/>
-                  <Email id={id} subject={subject} to={to} sub={subject} message={message} time={new Date(timestamp?.seconds * 1000).toUTCString()}/>
-                  <Email id={id} subject={subject} to={to} sub={subject} message={message} time={new Date(timestamp?.seconds * 1000).toUTCString()}/>
-                  <Email id={id} subject={subject} to={to} sub={subject} message={message} time={new Date(timestamp?.seconds * 1000).toUTCString()}/>
-                  <Email id={id} subject={subject} to={to} sub={subject} message={message} time={new Date(timestamp?.seconds * 1000).toUTCString()}/>
-                  <Email id={id} subject={subject} to={to} sub={subject} message={message} time={new Date(timestamp?.seconds * 1000).toUTCString()}/>
-                  <Email id={id} subject={subject} to={to} sub={subject} message={message} time={new Date(timestamp?.seconds * 1000).toUTCString()}/>
-                  </>
                   )) }
                  
               </div>
