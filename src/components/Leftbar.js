@@ -21,10 +21,13 @@ import SettingsIcon from '@material-ui/icons/Settings';
 import VideocamIcon from '@material-ui/icons/Videocam';
 import KeyboardIcon from '@material-ui/icons/Keyboard';
 import PersonIcon from '@material-ui/icons/Person';
+import { useSelector } from "react-redux";
+import { selectlogin } from "../features/loginSlice";
 
 
 export const Leftbar = ({onclick}) => {
-    const [more, setmore] = useState(false)
+  const user = useSelector(selectlogin);
+    const [more, setmore] = useState(false);
   return (
     <div className="side">
       <div className="top">
@@ -71,7 +74,7 @@ export const Leftbar = ({onclick}) => {
          <div className="meet">
          <div>
          <Avatar id="av"/>
-         <p>harsh</p>
+         <p>{user.displayName}</p>
          </div>
          <IconButton id="bu"><AddIcon/> </IconButton>
          </div>

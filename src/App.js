@@ -3,9 +3,10 @@ import { useDispatch, useSelector } from 'react-redux';
 import './App.css';
 import { auth } from './components/fireb';
 import { Header } from './components/header'
+import { Loading } from './components/loading';
 import { Login } from './components/login';
 import { Main } from './components/Main';
-import { selectlogin,login, logout, loading, selectloading } from './features/loginSlice';
+import { selectlogin,login, logout, selectloading } from './features/loginSlice';
 function App() {
   
   const  islogin= useSelector(selectlogin);
@@ -38,7 +39,7 @@ function App() {
   return (
 
     <div className="App">
-      {isloading?("yooooooo"):(
+      {isloading?(<Loading/>):(
          !islogin?
           (<Login/>):
          (<>

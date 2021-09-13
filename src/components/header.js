@@ -8,12 +8,13 @@ import HelpOutlineIcon from "@material-ui/icons/HelpOutline";
 import AppsIcon from "@material-ui/icons/Apps";
 import "./css/header.css";
 import { Avatar, IconButton } from "@material-ui/core";
-import { useDispatch } from "react-redux";
-import { logout } from "../features/loginSlice";
+import { useDispatch, useSelector } from "react-redux";
+import { logout, selectlogin } from "../features/loginSlice";
 import { auth} from "./fireb";
 
 export const Header = () => {
-  
+
+  const user = useSelector(selectlogin);
   const [hopt, sethopt] = useState(false);
   const dispatch = useDispatch();
   return (
@@ -45,8 +46,8 @@ export const Header = () => {
         {hopt && 
         <div className="hopt">
             <Avatar style={{height:'70px',width:'70px'}}/>
-            <h2>namemera</h2>
-            <h3>blah blah @gmail.com</h3>
+            <h2>{user.displayName}</h2>
+            <h3>{user.email}</h3>
             <div className="lout">
             <button onClick={() => { auth.signOut().then(dispatch(logout()))}} >logout</button>
             </div>

@@ -5,26 +5,25 @@ import RemoveIcon from "@material-ui/icons/Remove";
 import FullscreenIcon from "@material-ui/icons/Fullscreen";
 import FullscreenExitIcon from "@material-ui/icons/FullscreenExit";
 import "./css/compose.css";
-import { useForm } from "react-hook-form";
+import { useForm, useFormState } from "react-hook-form";
 import { db } from "./fireb";
-import firebase from 'firebase'
-
+import firebase from "firebase";
 
 export const Compose = ({ close }) => {
   const [resize, setresize] = useState({ mini: false, fullsize: false });
-  const {register,handleSubmit}=useForm();
+  const { register, handleSubmit } = useForm();
+  
 
- const submit = (data)=>{
-    console.log('sending ')
-     db.collection('sent').add({
-      to:data.to,
-      subject:data.subject,
-      message:data.message,
-      timestamp:firebase.firestore.FieldValue.serverTimestamp(),
-      
+  const submit = (data) => {
+    console.log("sending ");
+    db.collection("sent").add({
+      to: data.to,
+      subject: data.subject,
+      message: data.message,
+      timestamp: firebase.firestore.FieldValue.serverTimestamp(),
     });
-     close();
- }
+    close();
+  };
 
   function standard() {
     console.log("entered");
@@ -63,18 +62,31 @@ export const Compose = ({ close }) => {
               To
               <span className="cp">
                 {" "}
-                <input name='to'type="email" {...register('to',{required:true})}/>{" "}
+                <input
+                  name="to"
+                  type="email"
+                  {...register("to", { required: true })}
+                />{" "}
               </span>
             </p>
             <p>
               Subject
               <span className="cp">
                 {" "}
-                <input name='subject' type="text" { ...register('subject',{required:true})} />{" "}
+                <input
+                  name="subject"
+                  type="text"
+                  {...register("subject", { required: true })}
+                />{" "}
               </span>
             </p>
-            <input name='message' id="cmain" type="text" {...register('message' , {required:true})} />
-            <input type='submit' style={{display:'none'}} />
+            <textarea               
+              name="message"
+              id="cmain"
+              type="text"
+              {...register("message", { required: true })}
+            />
+            <input type="submit" style={{ display: "none" }} />
           </form>
         </div>
         <div className="cfooter"></div>
