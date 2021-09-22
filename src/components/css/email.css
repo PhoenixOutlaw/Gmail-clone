@@ -32,9 +32,11 @@
 }
 
 .di{
-    flex:0.8;
+    flex:0.65;
+    width: 50%;
     margin: 0%;
     padding: 0 30px 0 60px;
+    cursor: pointer;
 }
 .di>div{
  display: flex;
@@ -50,6 +52,7 @@
     font-weight:500;
 }
 #desc{
+    max-width: 100%;
     color:gray;
     font-size: 15px;
     font-weight: 300; 
@@ -58,6 +61,8 @@
     text-overflow: ellipsis;
 }
 .tym{
+    flex: 0.2;
+
     color:gray;
     font-size: 12px;
     font-weight: 380; 

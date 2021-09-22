@@ -72,18 +72,18 @@ export const Login = () => {
               <h4>Sign in </h4>
               <p>to continue to Gmail</p>
             </div>
-            <div>
+            {/* <div>
               <form action="" className="in ">
                 <input type="email" placeholder="Email" />
                 <input type="password" placeholder="Password" />
                 <button type="submit"></button>
               </form>
-            </div>
+            </div> */}
 
             <div className="opt">
-              <button id="i" onClick={() => setregister(true)}>
+              {/* <button id="i" onClick={() => setregister(true)}>
                 Create a account
-              </button>
+              </button> */}
               <Button onClick={signin}>
                 <img
                   src="https://img-authors.flaticon.com/google.jpg"
@@ -95,7 +95,7 @@ export const Login = () => {
                   }}
                 />
               </Button>
-              <button className="ii">Sign in </button>
+              {/* <button className="ii">Sign in </button> */}
             </div>
           </div>
         </>

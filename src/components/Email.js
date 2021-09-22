@@ -32,7 +32,7 @@ export const Email = ({to , sub , message ,time}) => {
         }
         <Checkbox />
         <StarBorderOutlined />
-        <p>{to}</p>
+        <p onClick={selected} >{to}</p>
       </div>
       <div className="di" onClick={selected}>
         <div >
