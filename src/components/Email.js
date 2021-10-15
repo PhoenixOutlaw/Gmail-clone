@@ -9,7 +9,7 @@ import { selectedmail } from "../features/mailSlice";
 
 
 export const Email = ({to , sub , message ,time}) => {
-
+ 
   const dispatch = useDispatch();
    const [mover, setmover] = useState(false)
    const history = useHistory(); 

@@ -11,9 +11,7 @@ export const Main = () => {
     <div className="main">
         <Leftbar onclick={()=>setcompose(true)}/>
         {compose && <Compose close={()=>setcompose(false)}/>}
-        <Feed/>
-      {/* 
-            <Rightbar/> */}
+        <Feed onclick={()=>setcompose(true)}/>
     </div>
   );
 };

@@ -4,6 +4,7 @@
     display:flex;
     justify-content:space-between;
     position: sticky;
+    padding: 0 10px 0 10px ;
 }
 .lefthead{
     display:flex;
@@ -20,7 +21,6 @@
     flex: 0.7;
 }
 .searchbar{
-   margin-left: -110px;
     border-radius: 7px;
     color: rgb(128, 128, 128);
     background-color: whitesmoke;
@@ -101,4 +101,15 @@
  }
  .lout>button:hover{
      background-color: whitesmoke;
+ }
+
+ @media screen and (max-width:700px) {
+     .midhead{display:none;}
+     .lefthear{
+         margin: 0;
+     }
+     .righthead>.MuiSvgIcon-root,#avatar{
+        margin-left: 10px;
+    }
+     
  }

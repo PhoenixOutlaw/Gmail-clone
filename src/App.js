@@ -31,11 +31,7 @@ function App() {
    )
   }, [])
 
-  if(window.innerWidth<=620){
-    return(
-      <div><h1 style={{fontsize:"24px" , textAlign:"center" ,marginTop:"190px"}}>Not made for phone</h1></div>
-    )
-  }
+
   return (
 
     <div className="App">

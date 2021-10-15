@@ -2,11 +2,6 @@
     display:flex;
 
 }
-@media only screen and (max-width: 600px) {
-    .main {
-      flex-direction: column;
-    }
-  }
 
 .side{
     flex: 0.16;
@@ -14,7 +9,7 @@
     position: sticky;   
     
 }
-.top,.mid,.submid{
+.top,.mid,.submid{ 
     border-bottom: solid whitesmoke 2px;
 }
 .new{
@@ -100,3 +95,10 @@
     color:gray;
 }
 
+
+@media only screen and (max-width: 600px) {
+    .main {
+      flex-direction: column;
+    }
+    .side{display: none;}
+  }

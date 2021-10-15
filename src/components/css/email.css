@@ -1,8 +1,8 @@
 .mail{
     display: flex;
     align-items: center ;
-    box-sizing: border-box;
-    padding:  0 25px 0 8px;
+    justify-content: space-between ;
+    width: 100%;
    
 }
 .mail:hover{
@@ -15,15 +15,18 @@
 
 
 .left{ 
-    display: inherit;
-    flex: 0.2;
+    flex: 0.3;
+    width: 100%;
+    display: flex;
    align-items: center;
     color:gray;
 }
 
 .left>p{
     color: black;
+    width: 100%;
     margin: 0 0 0 30px !important;
+    text-overflow: ellipsis;
     font-weight: 600;
 }
 .mail>div>p{
@@ -32,10 +35,10 @@
 }
 
 .di{
-    flex:0.65;
-    width: 50%;
+    flex:0.4;
+    width: 100%;
     margin: 0%;
-    padding: 0 30px 0 60px;
+    overflow: hidden;
     cursor: pointer;
 }
 .di>div{
@@ -48,11 +51,13 @@
 }
 .di>div>p{
     white-space: nowrap;
+    margin: 0;
     font-size: 15px;
     font-weight:500;
 }
 #desc{
     max-width: 100%;
+    margin: 0;
     color:gray;
     font-size: 15px;
     font-weight: 300; 
@@ -62,8 +67,20 @@
 }
 .tym{
     flex: 0.2;
-
     color:gray;
     font-size: 12px;
     font-weight: 380; 
+}
+.tym>p{
+    width:100%;
+    overflow:hidden;
+    text-overflow: ellipsis;
+}
+@media screen and (max-width:680px) {
+    .di{display:none; }
+    .left{flex:.6;
+        width: 100%;
+        overflow:hidden;
+        }
+    .tym{flex: .3;}
 }

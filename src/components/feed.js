@@ -5,8 +5,9 @@ import ReplayIcon from "@material-ui/icons/Replay";
 import MoreVertIcon from "@material-ui/icons/MoreVert";
 import "./css/feed.css";
 import { ArrowDropDown, Inbox, Person } from "@material-ui/icons";
-import { Checkbox, IconButton } from "@material-ui/core";
+import { Button, Checkbox, IconButton } from "@material-ui/core";
 import LocalOfferIcon from "@material-ui/icons/LocalOffer";
+import AddIcon from "@material-ui/icons/Add";
 import { Feedicon } from "./feedicon";
 import { Email } from "./Email";
 import {
@@ -20,7 +21,7 @@ import { db } from "./fireb";
 let n = 11,
   o = "12,393";
 
-export const Feed = () => {
+export const Feed = ({onclick}) => {
 
   
   const [email, setemail] = useState([]);
@@ -48,7 +49,6 @@ export const Feed = () => {
             <div className="feedheader">
               <div className="feedheaderleft">
                 <Checkbox label="chkbx " />
-
                 <IconButton className="ibt">
                   <ArrowDropDown className="bt" />
                 </IconButton>
@@ -70,6 +70,7 @@ export const Feed = () => {
             </div>
 
             <div className="emails">
+              <button  className="bnew" onClick={onclick}><AddIcon /></button>
               <div className="email-list">
                 <div className="feedmid">
                   <Feedicon

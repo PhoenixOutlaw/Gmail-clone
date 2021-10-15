@@ -34,7 +34,7 @@ export const Mail = () => {
     
     const history=useHistory();
    
-    
+     
     return (
        
         <div className="feed" >
